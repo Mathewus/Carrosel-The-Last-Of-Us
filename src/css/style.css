@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+
+    padding: 0 40px;
+}
+
+main::after {
+
+    content: "";
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1;
+}
+
+#carrosel {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#carrosel .imagem {
+
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+
+}
+
+#carrosel .imagem.ativa {
+
+    display: block;
+    animation: mudarImagem 0.7s;
+
+}
+
+@keyframes mudarImagem {
+
+    from {
+
+        opacity: 0.85;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+
+}
+
+#conteudo {
+
+    max-width: 1280px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+#conteudo #info img {
+
+    max-width: 350px;
+    filter: invert(1);
+    margin-bottom: 80px;
+}
+
+#conteudo #info p {
+
+    width: 49%;
+    font-size: 23px;
+    color: #ffffff;
+    line-height: 30px;
+}
+
+#conteudo #botoes-carrosel {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#conteudo #botoes-carrosel .botao {
+
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
+}
+
+#conteudo #botoes-carrosel .botao.selecionado {
+
+    background-color: #1d8346;
+
+}
+
+#menu-lateral {
+
+    position: fixed;
+    width: 80px;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+#menu-lateral .icone {
+
+    width: 30px;
+    filter: invert(1);
+    transition: .3s ease-in-out;
+}
+
+#menu-lateral .icone:hover {
+
+    transform: scale(1.2);
+}

@@ -1,0 +1,75 @@
+@media (max-width: 680px) {
+
+    #conteudo #info {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #conteudo #info p {
+
+        width: 60%;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    main {
+        padding: 40px;
+    }
+
+    #conteudo {
+
+        min-height: 70vh;
+        gap: 50px;
+
+    }
+
+    #conteudo #info img {
+
+        max-width: 300px;
+    }
+
+    #conteudo #info p {
+
+        width: 100%;
+    }
+
+    #menu-lateral {
+
+        position: static;
+        min-height: auto;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    #menu-lateral ul {
+
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 330px) {
+
+    
+    #conteudo #info img {
+
+        max-width: 100%;
+        min-width: 170px;
+    }
+
+    #conteudo #info p {
+
+        font-size: 18px;
+    }
+
+    #conteudo #botoes-carrosel .botao {
+
+        width: 10px;
+        height: 10px;
+    }
+
+}
